@@ -18,7 +18,7 @@ const Header = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [content]);
+  }, []);
 
   const leftArrowHandler = () => {
     setIndex((prevIndex) =>
