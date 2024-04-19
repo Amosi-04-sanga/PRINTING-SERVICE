@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { content } from "../../constant";
+import { Fade } from "react-awesome-reveal";
 
 const Header = () => {
   const [index, setIndex] = useState(0);
@@ -59,16 +60,17 @@ const Header = () => {
         <div className="text-white w-[75%]">
           <div>
             {content.map((item, i) => (
-              <div
-                className={`${index === i ? "block" : "hidden"} text-center`}
-                key={i}
-              >
-                <h2 className={`text-[32px] capitalize font-bold`}>
-                  {" "}
-                  {item.title}{" "}
-                </h2>
-                <p className="pt-4"> {item.text} </p>
-              </div>
+              <Fade key={i}>
+                <div
+                  className={`${index === i ? "block" : "hidden"} text-center`}
+                >
+                  <h2 className={`text-[32px] capitalize font-bold`}>
+                    {" "}
+                    {item.title}{" "}
+                  </h2>
+                  <p className="pt-4"> {item.text} </p>
+                </div>
+              </Fade>
             ))}
           </div>
           <div className="mt-8 flex max-sm:flex-col max-sm:w-[80%] mx-auto justify-center">

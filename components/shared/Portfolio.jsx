@@ -51,7 +51,7 @@ const Portfolio = () => {
         <div className="mt-8">
           <div className="flex justify-center sm:justify-start items-center flex-wrap gap-4">
             {products.map((item, i) => (
-              <Fade key={i} delay={500}>
+              <Fade key={i} delay={100}>
                 <div className="max-w-[300px] mx-auto shadow-md" >
                   <div>
                     <Image
